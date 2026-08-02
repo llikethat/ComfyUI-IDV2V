@@ -1,0 +1,28 @@
+# ComfyUI-IDV2V dependencies (installed into the ComfyUI Python environment).
+#
+# torch / torchvision are assumed present (they ship with ComfyUI).
+# NOTE: do NOT `pip install diffsynth` — the nodes use the diffsynth fork
+# bundled inside the ID-V2V repo (diffsynth_studio/) via sys.path.
+
+# SAM3 needs transformers >= 5.6 (Sam3VideoModel / Sam3VideoProcessor)
+transformers>=5.6
+huggingface-hub
+accelerate
+safetensors
+diffusers>=0.35.2
+peft
+einops
+imageio
+imageio[ffmpeg]
+sentencepiece
+protobuf
+ftfy
+easydict
+scikit-image
+opencv-python-headless
+scipy
+tqdm
+
+# Optional but strongly recommended for the 14B Wan attention path:
+#   flash-attn (build matching your torch/CUDA), e.g.
+#   pip install flash-attn --no-build-isolation
